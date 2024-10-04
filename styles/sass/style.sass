@@ -9,6 +9,13 @@ ul
 html, body
     height: 100%
 
+input
+    background: none
+    border: none
+
+    &:focus
+        outline: none
+
 body
     background-color: #F5F7FA
     display: flex
@@ -19,6 +26,15 @@ body
     max-width: 17.361%
     background-color: #FAFBFF
     position: relative
+
+    &::after
+        position: absolute
+        content: ''
+        height: 100%
+        width: 1px
+        background-color: #E6EFF5
+        right: -1px
+        top: 0
 
     &__container
         padding: 0 22px 0 44px
@@ -95,3 +111,133 @@ body
 
             & path
                 fill: #1814F3
+
+.main
+    width: 100%
+
+.header
+    height: 100px
+    background-color: #FFFFFF
+    width: 100%
+    display: flex
+    align-items: center
+    position: relative
+
+    &::after
+        content: ''
+        height: 1px
+        width: 100%
+        position: absolute
+        left: 0
+        right: 0
+        bottom: -1px
+        background-color: #E6EFF5
+
+    &__inner
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &-group
+            display: flex
+            gap: 30px
+            align-items: center
+            height: 60px
+
+    &__title
+        font-family: 'Inter'
+        font-weight: 600
+        font-size: 28px
+        line-height: 33.89px
+        color: #343C6A
+
+    &__search
+        display: flex
+        align-items: center
+        gap: 15px
+        height: 50px
+        background-color: #F5F7FA
+        border-radius: 40px
+        padding: 16px 25px
+        font-family: "Inter", sans-serif
+        font-weight: 400
+        font-size: 15px
+        line-height: 18.15px
+        color: #8BA3CB
+        cursor: pointer
+
+        & input
+            cursor: inherit
+
+    &__button
+        height: 50px
+        width: 50px
+        background-color: #F5F7FA
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        transition: all .3s
+
+        &:hover
+            transform: translateY(-12.5%)
+
+.container
+    padding: 20px 40px
+    width: 100%
+
+.tabs
+    background-color: #fff
+    border-radius: 25px
+    padding: 30px
+    display: flex
+    flex-direction: column
+    gap: 52px
+
+    &__list
+        display: flex
+        gap: 74px
+
+        &-item
+            font-family: 'Inter'
+            font-size: 16px
+            line-height: 19.36px
+            color: #718EBF
+            transition: all .3s
+            position: relative
+            cursor: pointer
+
+            &::after
+                height: 3px
+                content: ''
+                background-color: #1814F3
+                border-radius: 10px 10px 0 0
+                width: 100%
+                position: absolute
+                left: 0
+                bottom: -8px
+                opacity: 0
+                transition: all .3s
+
+            &--active
+                color: #1814F3
+
+                &::after
+                    opacity: 1
+
+            &:hover
+                color: #1814F3
+
+                &::after
+                    opacity: 1
+
+.avatar 
+    position: relative
+    width: max-content
+
+    &__edit 
+        position: absolute
+        right: -2px
+        bottom: 16px
