@@ -1,0 +1,97 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+ul
+    list-style-type: none
+
+html, body
+    height: 100%
+
+body
+    background-color: #F5F7FA
+    display: flex
+
+.aside
+    height: 100%
+    min-width: 250px
+    max-width: 17.361%
+    background-color: #FAFBFF
+    position: relative
+
+    &__container
+        padding: 0 22px 0 44px
+
+    &__header
+        height: 100px
+        align-items: center
+        display: flex
+
+.logo
+    display: flex
+    align-items: center
+    gap: 9px
+    cursor: pointer
+    transition: all .3s
+
+    &:hover
+        transform: translateX(2.5%)
+
+    &__label
+        font-weight: 900
+        font-size: 25px
+        line-height: 32px
+        color: #343C6A
+        font-family: "Mont"
+
+.menu
+    margin-top: 31px
+    display: flex
+    flex-direction: column
+    gap: 40px
+
+    &__item
+        display: flex
+        align-items: center
+        gap: 26px
+        transition: all .3s
+        color: #B1B1B1
+        cursor: pointer
+
+        & path
+            transition: all .3s
+
+        &-label
+            font-family: "Inter"
+            font-size: 18px
+            line-height: 21.78px
+
+        &::before
+            content: ''
+            width: 6px
+            height: 60px
+            left: 0
+            border-radius: 0 10px 10px 0
+            background-color: #1814F3
+            position: absolute
+            opacity: 0
+            transition: all .3s
+
+        &--active
+            color: #1814F3
+
+            &::before
+                opacity: 1
+
+            & path
+                fill: #1814F3
+
+        &:hover
+            color: #1814F3
+
+            &::before
+                opacity: 1
+
+            & path
+                fill: #1814F3
