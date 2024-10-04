@@ -244,6 +244,10 @@ body {
 .tabs__list-item:hover::after {
   opacity: 1;
 }
+.tabs__content-item {
+  display: flex;
+  gap: 53px;
+}
 
 .avatar {
   position: relative;
@@ -253,6 +257,39 @@ body {
   position: absolute;
   right: -2px;
   bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  width: 100%;
+}
+
+.input {
+  border-radius: 15px;
+  border: 1px solid #DFEAF2;
+  height: 50px;
+  font-family: 400;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18.15px;
+  color: #718EBF;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+.input__label {
+  width: calc(50% - 29px);
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  cursor: pointer;
+}
+.input__label span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
 }
 
 /*# sourceMappingURL=style.css.map */

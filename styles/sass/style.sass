@@ -233,6 +233,11 @@ body
                 &::after
                     opacity: 1
 
+    &__content
+        &-item
+            display: flex
+            gap: 53px
+
 .avatar 
     position: relative
     width: max-content
@@ -241,3 +246,34 @@ body
         position: absolute
         right: -2px
         bottom: 16px
+
+.form 
+    display: flex
+    flex-wrap: wrap
+    gap: 29px
+    width: 100%
+
+.input 
+    border-radius: 15px
+    border: 1px solid #DFEAF2
+    height: 50px
+    font-family: 400
+    font-weight: 400
+    font-size: 15px
+    line-height: 18.15px
+    color: #718EBF
+    padding: 16px 20px
+    cursor: pointer
+
+    &__label 
+        width: calc( 100% / 2 - 29px )
+        display: flex
+        flex-direction: column
+        gap: 11px
+        cursor: pointer
+
+        & span 
+            font-family: 'Inter'
+            font-weight: 400
+            font-size: 16px
+            line-height: 19.36px
